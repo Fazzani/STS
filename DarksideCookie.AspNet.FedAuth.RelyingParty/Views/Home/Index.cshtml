@@ -1,0 +1,26 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome @User.Identity.Name</h1>
+        <h1>AuthenticationType :  @User.Identity.AuthenticationType</h1>
+        <ul>
+            @foreach (var item in ViewBag.Claims)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    </div>
+   @Html.ActionLink("SignOut", "SignOut")
+</body>
+</html>

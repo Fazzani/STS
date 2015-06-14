@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDescriptor ID="_70a250d5-e3e1-494a-a392-7ed1736f3180" entityID="http://localhost:49569/" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+  <RoleDescriptor xsi:type="fed:SecurityTokenServiceType" protocolSupportEnumeration="http://docs.oasis-open.org/wsfed/federation/200706" 
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fed="http://docs.oasis-open.org/wsfed/federation/200706">
+    <KeyDescriptor use="signing">
+      <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <X509Data>
+          <X509Certificate>
+            MIIC5DCCAcygAwIBAgIQFsgWMW9t8rlFk5B9iZdtczANBgkqhkiG9w0BAQUFADAbMRkwFwYDVQQDExBUTUEtUEMuZ2xvYmFsLmZyMB4XDTE1MDYxNDExMjkzM1oXDTE2MDYxNDAwMDAwMFowGzEZMBcGA1UEAxMQVE1BLVBDLmdsb2JhbC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMNEpfSmm/SsgTAFi5nTsK4Ld8MIc4A1e0WCRXzBGe83eAUX00fBx7bR7wejGOSmeOeA7A9dTvbm0QqzI8HsppWv3NDoirwu13dB/2CSGgRm2ofri/radrzUe63w643+fdUv9BQnZVH85igaItlVx1uXQtooO2J5JsdGlhhamOeSGYWFVsNIAedNrVRgY7WN/iC7s0fxGSqdMIwK2XJ/ut3dNFQDiJ1JRDbiAn5Z+6N2/ySNTuwB3cxuoHGl4p7YR7QHPlKDnRBDVGPwjmw1F8ZYEMjWh5Us72fPQgiXafH6xBAMm8iHcP1T8wQgh9E9Wmq9v2VveXFbapz2eofUoS0CAwEAAaMkMCIwCwYDVR0PBAQDAgQwMBMGA1UdJQQMMAoGCCsGAQUFBwMBMA0GCSqGSIb3DQEBBQUAA4IBAQCcBz1ymoJEWYdxrlhkkIzgCg+nLN9AwGinkdiEe09XhW5qLk8H/lKv+Jp3BJ4k+E6vB4p24rKDNE2AwGwVuMSHJAPIIJvfnXH140r+6xZ5qNA+nUtH9SNcQgVdfiLGtc8jSTKu4Eq64k5iJOdzeAGxWsNdu4qhFxySS61JzNwznpUCCgwLK/rElDA6DcBeo1XugaiJSFg8IxW2Jkt+72nw+PuCE2BJkO8ulZKzqehNQwbaMQhRgfaCiG5BVA/wnAh5CRoOp0eMEO2FcIZ27XVgumOX2jVAFbp4AlpZbBVKvB82a7zdLy8GUYDlqiLm7rjngol5Fef9AOz+OoVD7rRW</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </KeyDescriptor>
+    <ContactPerson contactType="administrative">
+      <GivenName>Chris Klug</GivenName>
+    </ContactPerson>
+    <fed:ClaimTypesOffered>
+      <auth:ClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" Optional="true" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Name</auth:DisplayName>
+        <auth:Description>The name of the subject.</auth:Description>
+      </auth:ClaimType>
+      <auth:ClaimType Uri="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" Optional="true" xmlns:auth="http://docs.oasis-open.org/wsfed/authorization/200706">
+        <auth:DisplayName>Role</auth:DisplayName>
+        <auth:Description>The role of the subject.</auth:Description>
+      </auth:ClaimType>
+    </fed:ClaimTypesOffered>
+    <fed:SecurityTokenServiceEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>http://localhost:49569/</Address>
+      </EndpointReference>
+    </fed:SecurityTokenServiceEndpoint>
+    <fed:PassiveRequestorEndpoint>
+      <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+        <Address>http://localhost:49569/</Address>
+      </EndpointReference>
+    </fed:PassiveRequestorEndpoint>
+  </RoleDescriptor>
+</EntityDescriptor>
