@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.IdentityModel;
+using System.IdentityModel.Claims;
 using System.IdentityModel.Configuration;
+using System.IdentityModel.Policy;
 using System.IdentityModel.Protocols.WSTrust;
+using System.IdentityModel.Selectors;
 using System.IdentityModel.Tokens;
 using System.Linq;
 using System.Security.Claims;
@@ -107,4 +112,6 @@ namespace DarksideCookie.AspNet.FedAuth.CustomSTS.Security
             }
         }
     }
+
+
 }
